@@ -1,0 +1,22 @@
+{
+	"dir" : "ltr",
+	"lang" : "en-US",
+	"name" : "MyChatHub",
+	"scope" : "/",
+	"display" : "standalone",
+	"start_url" : "http://localhost/",
+	"short_name" : "MyChatHub",
+	"theme_color" : "#0cc2aa",
+	"description" : "Chat with people of your interest",
+	"orientation" : "portrait",
+	"background_color" : "#2dc48e",
+	"related_applications" : [],
+	"prefer_related_applications" : false,
+	"icons" : [
+		{"src": "assets/images/logo.png",
+			"sizes": "44x44"
+		}],
+	"url" : "http://localhost",
+	"screenshots" : [],
+	"generated" : "true"
+}

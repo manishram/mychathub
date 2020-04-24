@@ -1,0 +1,601 @@
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Chatroom</title>
+  <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular, AngularJS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta name="viewport" content="width=device-width, height=device-height">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <meta name="apple-mobile-web-app-title" content="Flatkit">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
+  
+  <!-- style -->
+  <link rel="stylesheet" href="../assets/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="../assets/glyphicons/glyphicons.css" type="text/css" />
+  <link rel='stylesheet' href='../assets/styles/all.css' type='text/css' >
+  <link rel="stylesheet" href="../assets/material-design-icons/material-design-icons.css" type="text/css" />
+
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- build:css ../assets/styles/app.min.css -->
+  <link rel="stylesheet" href="../assets/styles/app.css" type="text/css" />
+  <!-- endbuild -->
+  <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
+  
+  
+  <style>
+body{
+overflow-x:hidden !important;
+}
+.inner-box-overflow{ 
+overflow:auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f3f3f3; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888888; 
+}
+@media only screen and (max-width: 575px) {
+    #member-box-z {
+     display:none; }}
+@media only screen and (max-width: 575px) {
+    #inputEmail3 {
+        width:200px;}}
+@media only screen and (max-width: 575px) {
+    #msg-input-div {
+        position:fixed;
+		bottom:0;
+		margin-left:-10px;}}
+@media only screen and (min-width: 575px) {
+    .block-icon {
+        display:none;}}
+@media only screen and (min-width: 575px) {
+    .app-header {background-color:#fff !important;}}
+@media only screen and (max-width: 575px) {
+    #main {
+        display: none;
+    }
+}
+.nav.nav-center {
+    display: inline-block;
+    left: 0;
+    right: 0;
+    margin:0;
+    float:none;
+}
+.navbar-inner{
+    text-align:center;
+}
+</style>
+  </head>
+  
+  
+  
+  
+  
+  <body>
+  
+<!-- main page wrapper -->
+  <div class="app" id="app">
+  
+  
+  
+  
+  <!---Aside Left---->
+  
+    <div id="aside"  class="app-aside modal nav-dropdown">
+  	<!-- fluid app aside -->
+    <div class="left navside dark dk" data-layout="column">
+  	  <div class="navbar no-radius">
+        <!-- brand -->
+        <a class="navbar-brand">
+        	<div ui-include="'../assets/images/logo.svg'"></div>
+        	<img src="../assets/images/logo.png" alt="." class="hide">
+        	<span class="hidden-folded inline">Flatkit</span>
+        </a>
+        <!-- / brand -->
+      </div>
+      <div class="scroll" data-flex>
+          <nav style='padding:10px;' class="scroll nav-light">
+      
+	  Home<br><hr>
+	  Notifications<br><hr>
+	  Favorite Rooms<br><hr>
+	  Settings<br><hr>
+	  BUY VIP<br><hr>
+	  
+	  
+        </nav>
+      </div>
+      <div class="b-t">
+        <div class="nav-fold">
+        	<a href="profile.html">
+        	    <span class="pull-left">
+        	      <img src="../assets/images/a0.jpg" alt="..." class="w-40 img-circle">
+        	    </span>
+        	    <span class="clear hidden-folded p-x">
+        	      <span class="block _500">Jean Reyes</span>
+        	      <small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
+        	    </span>
+        	</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  <!-- End Aside Left -->
+  
+  
+  
+  
+  <!-- ------------------------------------------------------------------------Main content Middle---------------------------------------------------- -->
+  
+  
+  
+
+  
+  
+  
+  <!---Middle Body---->
+
+
+   <!-- Top main nav -->
+  
+   <div class="app-header dark dk box-shadow">
+
+        <div class="navbar navbar-toggleable-sm flex-row align-items-center">
+
+		<!-- Open side - Naviation on mobile -->
+            <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
+              <i class="material-icons">&#xe5d2;</i>
+            </a>
+			 
+           
+ 		   <!-- / -->
+        
+            <!-- Page title - Bind to $state's title -->
+            <div class="mb-0 h5 no-wrap" ng-bind="$state.current.data.title" id="pageTitle"></div>
+       
+            <!-- navbar collapse -->
+            <div class="collapse navbar-collapse" id="collapse">
+           
+		   <!-- link and dropdown -->
+              <ul class="nav navbar-nav mr-auto">
+       
+	   <li class="nav-item dropdown">
+                    
+					
+                  
+                  
+                </li>
+              </ul>
+        
+              <!-- / -->
+            </div>
+            <!-- / navbar collapse -->
+        
+            <!-- navbar right -->
+            
+			<ul class="block-icon nav navbar-nav ml-auto flex-row">
+            <a data-toggle="modal" data-target="#aside_2" style='float:right;'  class="hidden-lg-up mr-3">
+              <i class="material-icons">&#xe5d2;</i>
+            </a> 
+            </ul>
+ 		
+
+            <!-- / navbar right -->
+        </div>
+    </div>
+  
+  
+  <!--End Top Main Nav -->
+  <div id="content"  class="app-content box-shadow-z0" role="main">
+
+   
+    <div ui-view class="app-body" id="view" >
+
+<!-- ############ PAGE START-->
+<div class='padding' style='padding:0.5rem 1.0rem;padding-bottom:0;margin-bottom:0;'>
+<div class='row' >
+<div class="box col-sm-9" style='padding:0;'>
+						<div class="box-header">
+							<span class="label success pull-right">5</span>
+							<h3>Room List</h3>
+						</div>
+						 <div class="box-divider m-0"></div>
+						<div class="box-body inner-box-overflow" style=''>
+						  
+						  <div class='row'>
+						  
+						  
+						  <div class="col-xs-6 col-sm-12 col-md-6" style=''>
+				  <div class="box text-center" style='border:0.5px solid #d8d8d8;border-radius:5px;box-shadow:none;background-color:#fbfbfb;'>
+						<div class="box-tool">
+				        <ul class="nav">
+				          <li class="nav-item inline dropdown">
+				           <h5 style='display:inline;'><span class="label rounded primary label-md">156 </span></h5>
+				          <i style='color:##969696;' class="fas fa-users fa-lg"></i></li>
+				        </ul>
+				    </div>
+				    <div class="p-a-md">
+				    	<p><img src="../assets/images/a4.jpg" class="img-circle w-56"></p>
+				    	<a href="" class="text-md block text-uppercase"><strong><font style='color:#7d7777 !important;'>cricket</font></strong></a>
+				    	<p><small class='muted' style='color:#888888;font-size:80%;'>This is a cricket room. People interested in cricket are here discussing about cricket related topics.</small></p>
+				    	<a href="" class="btn btn-sm btn-outline rounded b-primary text-primary">Enter Room</a>
+				    </div>
+				    
+				  </div>
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-6" style=''>
+				  <div class="box text-center" style='border:0.5px solid #d8d8d8;border-radius:5px;box-shadow:none;background-color:#fbfbfb;'>
+						<div class="box-tool">
+				        <ul class="nav">
+				          <li class="nav-item inline dropdown">
+				           <h5 style='display:inline;'><span class="label rounded primary label-md">156 </span></h5>
+				          <i style='color:##969696;' class="fas fa-users fa-lg"></i></li>
+				        </ul>
+				    </div>
+				    <div class="p-a-md">
+				    	<p><img src="../assets/images/a4.jpg" class="img-circle w-56"></p>
+				    	<a href="" class="text-md block text-uppercase"><strong><font style='color:#7d7777 !important;'>cricket</font></strong></a>
+				    	<p><small class='muted' style='color:#888888;font-size:80%;'>This is a cricket room. People interested in cricket are here discussing about cricket related topics.</small></p>
+				    	<a href="" class="btn btn-sm btn-outline rounded b-primary text-primary">Enter Room</a>
+				    </div>
+				    
+				  </div>
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-6" style=''>
+				  <div class="box text-center" style='border:0.5px solid #d8d8d8;border-radius:5px;box-shadow:none;background-color:#fbfbfb;'>
+						<div class="box-tool">
+				        <ul class="nav">
+				          <li class="nav-item inline dropdown">
+				           <h5 style='display:inline;'><span class="label rounded primary label-md">156 </span></h5>
+				          <i style='color:##969696;' class="fas fa-users fa-lg"></i></li>
+				        </ul>
+				    </div>
+				    <div class="p-a-md">
+				    	<p><img src="../assets/images/a4.jpg" class="img-circle w-56"></p>
+				    	<a href="" class="text-md block text-uppercase"><strong><font style='color:#7d7777 !important;'>cricket</font></strong></a>
+				    	<p><small class='muted' style='color:#888888;font-size:80%;'>This is a cricket room. People interested in cricket are here discussing about cricket related topics.</small></p>
+				    	<a href="" class="btn btn-sm btn-outline rounded b-primary text-primary">Enter Room</a>
+				    </div>
+				    
+				  </div>
+				</div>
+					<div class="col-xs-6 col-sm-12 col-md-6" style=''>
+				  <div class="box text-center" style='border:0.5px solid #d8d8d8;border-radius:5px;box-shadow:none;background-color:#fbfbfb;'>
+						<div class="box-tool">
+				        <ul class="nav">
+				          <li class="nav-item inline dropdown">
+				           <h5 style='display:inline;'><span class="label rounded primary label-md">156 </span></h5>
+				          <i style='color:##969696;' class="fas fa-users fa-lg"></i></li>
+				        </ul>
+				    </div>
+				    <div class="p-a-md">
+				    	<p><img src="../assets/images/a4.jpg" class="img-circle w-56"></p>
+				    	<a href="" class="text-md block text-uppercase"><strong><font style='color:#7d7777 !important;'>cricket</font></strong></a>
+				    	<p><small class='muted' style='color:#888888;font-size:80%;'>This is a cricket room. People interested in cricket are here discussing about cricket related topics.</small></p>
+				    	<a href="" class="btn btn-sm btn-outline rounded b-primary text-primary">Enter Room</a>
+				    </div>
+				    
+				  </div>
+				</div>
+					<div class="col-xs-6 col-sm-12 col-md-6" style=''>
+				  <div class="box text-center" style='border:0.5px solid #d8d8d8;border-radius:5px;box-shadow:none;background-color:#fbfbfb;'>
+						<div class="box-tool">
+				        <ul class="nav">
+				          <li class="nav-item inline dropdown">
+				           <h5 style='display:inline;'><span class="label rounded primary label-md">156 </span></h5>
+				          <i style='color:##969696;' class="fas fa-users fa-lg"></i></li>
+				        </ul>
+				    </div>
+				    <div class="p-a-md">
+				    	<p><img src="../assets/images/a4.jpg" class="img-circle w-56"></p>
+				    	<a href="" class="text-md block text-uppercase"><strong><font style='color:#7d7777 !important;'>cricket</font></strong></a>
+				    	<p><small class='muted' style='color:#888888;font-size:80%;'>This is a cricket room. People interested in cricket are here discussing about cricket related topics.</small></p>
+				    	<a href="" class="btn btn-sm btn-outline rounded b-primary text-primary">Enter Room</a>
+				    </div>
+				    
+				  </div>
+				</div>
+				<div class="col-xs-6 col-sm-12 col-md-6" style=''>
+				  <div class="box text-center" style='border:0.5px solid #d8d8d8;border-radius:5px;box-shadow:none;background-color:#fbfbfb;'>
+						<div class="box-tool">
+				        <ul class="nav">
+				          <li class="nav-item inline dropdown">
+				           <h5 style='display:inline;'><span class="label rounded primary label-md">156 </span></h5>
+				          <i style='color:##969696;' class="fas fa-users fa-lg"></i></li>
+				        </ul>
+				    </div>
+				    <div class="p-a-md">
+				    	<p><img src="../assets/images/a4.jpg" class="img-circle w-56"></p>
+				    	<a href="" class="text-md block text-uppercase"><strong><font style='color:#7d7777 !important;'>cricket</font></strong></a>
+				    	<p><small class='muted' style='color:#888888;font-size:80%;'>This is a cricket room. People interested in cricket are here discussing about cricket related topics.</small></p>
+				    	<a href="" class="btn btn-sm btn-outline rounded b-primary text-primary">Enter Room</a>
+				    </div>
+				    
+				  </div>
+				</div>
+						  
+						  
+						  
+						  </div>
+						  
+						  
+						</div>
+					</div>
+
+
+
+<div class="box col-sm-3 " style='padding:0;' id="member-box-z">
+			            
+        <div class="b-b b-primary nav-active-primary">
+          <ul class="nav " style=' width:100%;height:48px;z-index:0;overflow-x:auto;overflow-y:hidden;'>
+            
+            <li style='width:100%;' class="nav-item">
+              <a class="nav-link active" style='height:48px' href="" data-toggle="tab" data-target="#tab6" aria-expanded="true"><center>
+<i style='margin:0px; padding:0px;' class='fas fa-user-friends fa-lg'></i> 
+<small style='font-size:80%;padding:0;margin:0;' class="text-muted text-ellipsis">Friends</small>
+</center></a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" >
+         
+          <div class="tab-pane animated fadeIn text-muted active" id="tab6" aria-expanded="true">
+              <div class="box-body inner-box-overflow" style='padding:0px !important; overflow-x:hidden;'>
+						<ul class="list no-border p-b">
+						
+						  	<li class="list-item">
+			                <a  data-toggle="modal" data-target="#profile_2 " class="list-left">
+			                	<span class="w-40 avatar">
+				                  <img src="../assets/images/a4.jpg" alt="...">
+				                  <i class="on b-white bottom"></i>
+				                </span>
+			                </a>
+			                <div class="list-body">
+			                  <div>
+							  
+ <a data-toggle="modal" data-target="#profile_2 ">Chris Fox</a>
+ <a data-toggle="modal" data-target="#chat_2 "   style='float:right'><i class="fas fa-comment-dots fa-2x"></i></a>
+ </div>
+			                  <small class="text-muted text-ellipsis">Designer, Blogger</small>
+			                </div>
+			              </li>
+						  
+						  
+
+
+			              
+			            </ul>
+						
+						
+			        </div>
+		
+          </div>
+        </div>
+      
+					 <div class="box-divider m-0"></div>
+					</div>
+					
+			
+</div>		
+<div class="modal inactive" style='z-index:10000;' id="chat_2" data-backdrop="false">
+  <div  class="right w-xxl dark dk b-l">
+  	<div ui-include="'../views/blocks/modal.chat.html'"></div>
+  </div>
+</div>
+<div class="modal fade" id="profile_2"  role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content col-xs-#" style='padding:0;'>
+      
+      
+      <div class="modal-body" style='padding:0;'>
+        <div class="box" style='box-shadow:none;'>
+					    <div class="item">
+						    <div class="item-bg">
+						      <img src="../assets/images/a3.jpg" class="blur">
+						    </div>
+						    <div class="p-a-lg pos-rlt text-center">
+						    	<img src="../assets/images/a3.jpg" class="img-circle w-56" style="margin-bottom: -7rem">
+						    </div>
+						</div>
+					    <div class="p-a text-center">
+					    	<a href="" class="text-md m-t block">Jack Perez</a>
+					    	<p><small>Designer, Blogger</small></p>
+					    	<a href="" class="btn btn-sm primary">Add Friend</a>
+					    	<a href="" class="btn btn-sm danger">Block</a>
+							<p></p>
+							<div class="text-xs">
+					    		<em>Photos: <strong>32</strong>, Videos: <strong>50</strong></em>
+					    	</div>
+							
+							<button type="button" style='float:right;margin-left:10px;' class="btn btn-sm light" data-dismiss="modal">Close</button>
+					
+					    </div>
+						
+					</div>
+      </div>
+	 
+     
+    </div>
+  </div>
+</div>		              
+
+					</div>
+
+
+          
+        
+            <!-- Page title - Bind to $state's title -->
+            <div class="mb-0 h5 no-wrap" ng-bind="$state.current.data.title" id="pageTitle"></div>
+        
+            <!-- navbar collapse -->
+          
+            <!-- / navbar collapse -->
+        
+         
+        </div>
+    </div>
+
+  
+  <!---End Middle Body---->  
+  
+  
+  
+  
+  
+  
+    <!-- -----------------------------------------------------------------------End Main content Middle ---------------------------------------------------->
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Aside 2nd Right-->
+  
+     <div id="aside_2"  class="app-aside modal nav-dropdown">
+  	<!-- fluid app aside -->
+    <div class="right navside dark dk" style='width:80%;' data-layout="column">
+  	  
+      <div class="scroll" data-flex >
+          <nav class="scroll nav-light">
+         <div class="b-b b-primary nav-active-primary">
+          <ul class="nav " style=" width:100%;height:48px;z-index:0;overflow-x:auto;overflow-y:hidden;">
+            
+            <li style="width:100%;" class="nav-item">
+              <a class="nav-link active" style="line-height:1.0rem;height:48px" href="" data-toggle="tab" data-target="#tab6" aria-expanded="true"><center>
+<i style="margin:7px; padding:0px;" class="fas fa-user-friends fa-lg"></i>
+<small style="font-size:80%;padding:0;margin:0;" class=" text-ellipsis">Friends</small>
+</center></a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" >
+          <div class="tab-pane animated fadeIn text-muted active" id="tab13" aria-expanded="true">
+          <div class="box-body inner-box-overflow" style='padding:0px !important; overflow-x:hidden;'> <ul class="list no-border p-b">
+						
+						  	<li class="list-item">
+			                <a  data-toggle="modal" data-target="#profile_2 " class="list-left">
+			                	<span class="w-40 avatar">
+				                  <img src="../assets/images/a4.jpg" alt="...">
+				                  <i class="on b-white bottom"></i>
+				                </span>
+			                </a>
+			                <div class="list-body">
+			                  <div>
+							  
+ <a data-toggle="modal" data-target="#profile_2 ">Chris Fox</a>
+ <a data-toggle="modal" data-target="#chat "   style='float:right'><i class="fas fa-comment-dots fa-2x"></i></a>
+ </div>
+			                  <small class="text-muted text-ellipsis">Designer, Blogger</small>
+			                </div>
+			              </li>
+						  
+						  
+
+
+			              
+			            </ul>
+          </div></div>
+        </div>
+      
+
+        </nav>
+      </div>
+      <div class="modal inactive" style='z-index:10000;' id="chat" data-backdrop="false">
+  <div style='width:125%;' class="right w-xxl dark dk b-l">
+  	<div ui-include="'../views/blocks/modal.chat.html'"></div>
+  </div>
+</div>	
+    </div>
+  </div>
+ 
+  
+  <!--- End Aside 2nd Right--->
+  </div>
+  
+  
+  
+  
+  <!-- build:js scripts/app.html.js -->
+<!-- jQuery -->
+  <script src="../libs/jquery/jquery/dist/jquery.js"></script>
+
+<!-- Bootstrap -->
+  <script src="../libs/jquery/tether/dist/js/tether.min.js"></script>
+  <script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+  <script src="../libs/jquery/underscore/underscore-min.js"></script>
+  <script src="../libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="../libs/jquery/PACE/pace.min.js"></script>
+
+  <script src="scripts/config.lazyload.js"></script>
+
+  <script src="scripts/palette.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-include.js"></script>
+  <script src="scripts/ui-device.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+
+  <script src="scripts/app.js"></script>
+
+  <!-- ajax -->
+  <script src="../libs/jquery/jquery-pjax/jquery.pjax.js"></script>
+  <script src="scripts/ajax.js"></script>
+<!-- endbuild -->
+</body>
+</html>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
