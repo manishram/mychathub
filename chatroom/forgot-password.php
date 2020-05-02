@@ -33,8 +33,8 @@
 <!-- ############ LAYOUT START-->
   <div class="center-block w-xxl w-auto-xs p-y-md">
     <div class="navbar">
-      <div class="pull-center">
-        
+      <div class="">
+	  <center><img src="../assets/mychathub-logo.svg" style="height:50px;"></img></center>
       </div>
     </div>
     <div class="p-a-md box-color r box-shadow-z1 text-color m-a">

@@ -62,7 +62,8 @@ else{header("Location: rooms.php");}
 <!-- ############ LAYOUT START-->
   <div class="center-block w-xxl w-auto-xs p-y-md">
     <div class="navbar">
-      <div class="pull-center">
+      <div class="">
+	  <center><img src="../assets/mychathub-logo.svg" style="height:50px;"></img></center>
       </div>
     </div>
     <div class="p-a-md box-color r box-shadow-z1 text-color m-a">
@@ -116,7 +117,7 @@ $('#submit-btn').click(function(){
 	
 
 $.post($('#signin-form').attr('action'),$('#signin-form :input').serializeArray(),
-function(output){if(output == 1){$('#submit-btn').removeClass('primary');$('#loader-spin').show();$('#btn-text').hide();$('#submit-btn').prop('disabled',true);$('#wrong-text').hide();window.location.replace("rooms.php");}
+function(output){console.log(output);if(output == 1){$('#submit-btn').removeClass('primary');$('#loader-spin').show();$('#btn-text').hide();$('#submit-btn').prop('disabled',true);$('#wrong-text').hide();window.location.replace("rooms.php");}
 else{$('#wrong-text').show();$('#loader-spin').hide();$('#btn-text').show();}});
 	});
 

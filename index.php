@@ -15,7 +15,7 @@
 <meta property="og:description" content="MyChatHub is a social platform where you can join rooms of your interest and interact with people in that room.">
 <meta property="og:url" content="https://www.mychathub.in/">
 <meta property="og:site_name" content="MyChatHub">
-<link rel="icon" href="assets/favicon.ico" type="image/gif">
+
 <link rel="stylesheet" id="app-css" href="./assets/app.css" type="text/css" media="all">
 
       
@@ -107,9 +107,9 @@
           
 
                         <div class="row small-print ta-center">
-                    <div class="copyright">
-                    <p></p><p>Copyright 2019 MyChatHub. All rights reserved <span class="spacer">•</span> <a href="#">Privacy</a> <span class="spacer">•</span><a href="#">Terms</a></p>
-<p></p>
+                     <div class="copyright">
+                    <p></p><p>Copyright © 2020 MyChatHub. All rights reserved <span class="spacer">•</span> <a href="privacy-policy">Privacy</a> <span class="spacer">•</span><a
+href="terms">Terms</a></p> <p></p>
                 </div>
             </div>
                     </div>

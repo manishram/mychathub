@@ -30,6 +30,7 @@ include('conn.php');
   <link rel="stylesheet" href="../assets/styles/app.css" type="text/css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <style>
 .loader {
@@ -64,7 +65,8 @@ include('conn.php');
 <!-- ############ LAYOUT START-->
   <div class="center-block w-xxl w-auto-xs p-y-md">
     <div class="navbar">
-      <div class="pull-center">
+      <div class="">
+	  <center><img src="../assets/mychathub-logo.svg" style="height:50px;"></img></center>
       </div>
     </div>
 
@@ -93,10 +95,10 @@ include('conn.php');
         </div>
         <div class="m-b-md">
           <label class="md-check">
-            <input type="checkbox" name='tp' id='tp' class='' value='1' required><i class="primary"></i>Agree with <a id='tp_link' href class='text-primary'>terms and policy.</a>
+            <input type="checkbox" name='tp' id='tp' class='' value='1' required><i class="primary"></i><span id="tp_link">Agree with <a href="../terms"  class='text-primary'>terms</a> and <a href="../privacy-policy" class='text-primary'> policy.</a></span>
           </label>
         </div>
-        <button type="submit" id='submit-btn' class="btn  btn-block p-x-md" disabled='true'><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <center><div class="loader" id='loader-spin' style='display:none;' ></div></center><span id='btn-text'>Sign up<span></button>
+        <button type="submit" id='submit-btn' class="btn btn-block p-x-md g-recaptcha" disabled='true' data-sitekey="6LfY9u8UAAAAAIHEa_CQvfQJ9aYLyaV-oAsJYH06" data-callback='onSubmit'><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <center><div class="loader" id='loader-spin' style='display:none;' ></div></center><span id='btn-text'>Sign up<span></button>
       </form>
 	 
     </div>
@@ -116,12 +118,14 @@ include('conn.php');
   <script src="../libs/jquery/jquery/dist/jquery.js"></script>
   <script>
   $('#signup-form').submit(function(){ return false; });
-$('#submit-btn').click(function(){
+  function onSubmit(token) {
+	
 	
 $('#loader-spin').show();$('#btn-text').hide();$('#submit-btn').prop('disabled', true);
  
 $.post($('#signup-form').attr('action'),$('#signup-form :input').serializeArray(),function(output){if(output==1){window.location.replace("rooms.php");}else{window.location.replace("signup.php");}});
-});
+}
+
   
 $('#username').keyup(function(){
 var now_input_value = $('#username').val();
@@ -151,7 +155,7 @@ else{$('#submit-btn').prop('disabled',true);$('#submit-btn').removeClass('primar
 if($('#tp').prop('checked')==true){$('#tp_link').removeClass('');$('#tp_link').addClass('is-valid');}else{$('#tp_link').removeClass('is-valid');$('#tp_link').addClass('');}
   }
   
-  setInterval(check,0);
+  setInterval(check,1000);
 
 
   </script>

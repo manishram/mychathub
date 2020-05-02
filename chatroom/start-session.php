@@ -6,7 +6,7 @@ include('conn.php');
 
 $username = htmlentities(stripslashes(trim($_POST['username'])));
 $pass = md5(htmlentities(stripslashes(trim($_POST['password']))));
-$keepsigned=md5(htmlentities(stripslashes(trim($_POST['keepsigned']))));
+
 
 
 $sql = "SELECT*FROM users WHERE (username='$username' AND password='$pass' AND user_rank>0)";
@@ -22,7 +22,7 @@ $user_row=mysqli_fetch_array($signin_query);
 	
 if(isset($_POST['keepsigned']) && $keepsigned=='1')
 {
-	
+	$keepsigned=md5(htmlentities(stripslashes(trim($_POST['keepsigned']))));
 	//To delte previous sessions if any....(don't delete this block of code)
 	if(isset( $_SESSION['username'])){session_destroy();}	
 	if(isset($_COOKIE['cookie_username'])){setcookie('cookie_username', $_COOKIE['cookie_username'], time() - (86400 * 7), "/"); unset($_COOKIE['cookie_username']);}
