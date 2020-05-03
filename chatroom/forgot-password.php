@@ -44,8 +44,8 @@
       </div>
       <form name="reset" class='' method='post' action='forgot-pass-email.php'>
         <div class="md-form-group float-label">
-          <input type="email" name='email' id='email' class="md-input form-control" autocomplete='off' ng-model="user.email" required>
-          <label>You Username</label>
+           <input type="text" name='username' id='forgot-pass-username' class="md-input form-control" autocomplete='off' required>
+          <label>Your Username</label>
 		 
         </div>
         <button type="submit" class="btn primary btn-block p-x-md">Send</button>
