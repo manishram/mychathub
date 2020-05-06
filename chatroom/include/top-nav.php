@@ -34,9 +34,17 @@ if(!isset($_SESSION['username'])){die();}
             <!-- / navbar collapse -->
         
             <!-- navbar right -->
-           
+          
 			<ul class=" nav navbar-nav ml-auto flex-row" >
             <li class="nav-item dropdown pos-stc-xs">
+			   <a class="nav-link mr-2" title="Install MyChatHub" id="installBtn" href="#">
+                  <i class="fas fa-arrow-circle-down"></i>
+				 
+				  <span>
+                  
+                </a>
+			 </li>
+			<li class="nav-item dropdown pos-stc-xs">
 			   <a class="nav-link mr-2" href="" id="count_new_pm" data-toggle='modal' data-target='#pm_list_modal'>
                   <i class="fas fa-comment-alt"></i>
 				  <span id='red_indicator'>
@@ -279,9 +287,11 @@ else{}
 }
 
 
- 
+ if (window.matchMedia('(display-mode: standalone)').matches) {  
+ $('#installBtn').hide();    
+}
  
 
-	
+
 
 </script>

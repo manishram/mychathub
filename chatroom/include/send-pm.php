@@ -83,8 +83,54 @@ $sent_time=time();
 //need to work on file attachment//
 
 $sql = "INSERT INTO personal_chats (sender_user_id,receiver_user_id,msg,sent_time) VALUES ('$user_id' , '$receiver_user_id', '$msg', '$sent_time')";	
+
 if(mysqli_query($conn,$sql))
-{echo'1';}else{}
+{
+	
+	$sql = "SELECT*from users where user_id='$receiver_user_id' ";
+$query=mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($query);
+
+	// API access key from Google API's Console
+define( 'API_ACCESS_KEY', 'AAAA9MLkv08:APA91bFsKwI5qg-P2TSU2QAv0zSxe1FsYQeLrJ9C8zXay7CLDOV8UHbA1f90lDmBBD1WJt-wNK1B0ytzn5fAmNVV3SsyrdlOpdzckYb33iXaux6uRpWBy7bFviv8iaoQrOKQzh-bo_Y9' );
+
+
+$registrationIds ="$row[token_id]";
+
+// prep the bundle
+$msg = array
+('title'		=> 'MyChatHub',
+	'body' => 'New Message Received',
+	'click_action' => 'https://www.mychathub.in',
+    'icon'=> 'https://i.ibb.co/ckRLT5h/icon-256x256.png',
+    'priority'=> 'high'
+);
+
+$fields = array
+(
+	'registration_ids' 	=> array($registrationIds),
+	'notification'		=> $msg
+);
+ 
+$headers = array
+(
+	'Authorization: key=' . API_ACCESS_KEY,
+	'Content-Type: application/json'
+);
+ 
+$ch = curl_init();
+curl_setopt( $ch,CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send' );
+curl_setopt( $ch,CURLOPT_POST, true );
+curl_setopt( $ch,CURLOPT_HTTPHEADER, $headers );
+curl_setopt( $ch,CURLOPT_RETURNTRANSFER, true );
+curl_setopt( $ch,CURLOPT_SSL_VERIFYPEER, false );
+curl_setopt( $ch,CURLOPT_POSTFIELDS, json_encode( $fields ) );
+$result = curl_exec($ch );
+curl_close( $ch );
+
+
+	
+	echo'1';}else{}
 
 }
 }

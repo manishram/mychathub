@@ -56,3 +56,8 @@ while($row = mysqli_fetch_array($members_query_x))
 	";
 }}
 ?>
+<script>
+$('.user_id_data').click(function(){
+	$('#aside_2').modal('hide');
+});
+</script>

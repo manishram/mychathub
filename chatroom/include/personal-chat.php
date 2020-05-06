@@ -194,6 +194,7 @@ $('#upload_image_confirm_btn_pm').click(function(){
         $('#upload_image_confirm_btn_pm').text('Uploading...('+percentComplete+'%)');
 
         if (percentComplete === 100) {
+			
 			var ws_data=JSON.stringify({"data":$('#receiver_id').val(),"action":"update_pm"});
          	conn.send(ws_data);
 count_new_pm_and_noti();

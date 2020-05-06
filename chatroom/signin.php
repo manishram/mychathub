@@ -3,10 +3,13 @@ include"include/app-data.php";
 
 include"conn.php";
 session_start();
-if(!(isset($_SESSION['username'])) && (!isset($_COOKIE['cookie_username']))){}
-else{header("Location: rooms.php");}
+if((isset($_SESSION['username'])) || (isset($_COOKIE['cookie_username'])) && (isset($_COOKIE['cookie_session_id']))){
+	header("Location: rooms.php");
+}
+else{}
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +27,7 @@ else{header("Location: rooms.php");}
 <meta property="og:url" content="https://www.mychathub.in/chatroom/signin.php">
 <meta property="og:site_name" content="MyChatHub">
 
+
   <!-- style -->
   <link rel="stylesheet" href="../assets/animate.css/animate.min.css" type="text/css" />
   <link rel="stylesheet" href="../assets/glyphicons/glyphicons.css" type="text/css" />
@@ -35,6 +39,21 @@ else{header("Location: rooms.php");}
   <link rel="stylesheet" href="../assets/styles/app.css" type="text/css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
+  
+  
+  <link rel="icon" sizes="128x128" href="../images/touch/icon-128x128.png">
+<link rel="apple-touch-icon" sizes="128x128" href="../images/touch/icon-128x128.png">
+<link rel="icon" sizes="192x192" href="icon-192x192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="../images/touch/icon-192x192.png">
+<link rel="icon" sizes="256x256" href="../images/touch/icon-256x256.png">
+<link rel="apple-touch-icon" sizes="256x256" href="../images/touch/icon-256x256.png">
+<link rel="icon" sizes="384x384" href="../images/touch/icon-384x384.png">
+<link rel="apple-touch-icon" sizes="384x384" href="../images/touch/icon-384x384.png">
+<link rel="icon" sizes="512x512" href="../images/touch/icon-512x512.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../images/touch/icon-512x512.png">
+
+
+ 
 </head>
 <style>
 .loader {
@@ -87,7 +106,7 @@ else{header("Location: rooms.php");}
         </div>
         <div class="m-b-md">        
           <label class="md-check">
-            <input type="checkbox" name='keepsigned' value='1' ><i class="primary"></i> Keep me signed in
+            <input type="checkbox" name='keepsigned' value='1' checked><i class="primary"></i> Keep me signed in
           </label>
         </div>
         <button type="submit" id='submit-btn' class="btn primary btn-block p-x-md" ><span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> <center><div class="loader" id='loader-spin' style='display:none;' ></div><center><span id='btn-text'>Sign In<span></button>
@@ -148,6 +167,9 @@ else{$('#wrong-text').show();$('#loader-spin').hide();$('#btn-text').show();}});
   <!-- ajax -->
   <script src="../libs/jquery/jquery-pjax/jquery.pjax.js"></script>
   <script src="scripts/ajax.js"></script>
+
 <!-- endbuild -->
+
 </body>
+
 </html>

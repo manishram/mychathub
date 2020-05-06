@@ -237,9 +237,12 @@ $('#upload_image_confirm_btn').click(function(){
         $('#upload_image_confirm_btn').text('Uploading...('+percentComplete+'%)');
 
         if (percentComplete === 100) {
+			
 var ws_data=JSON.stringify({"data":myrmdat,"action":"update_room_msg"});
 	conn.send(ws_data);
-check();
+
+check();	
+
 	
         }
 
