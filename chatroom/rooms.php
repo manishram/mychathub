@@ -818,10 +818,12 @@ if(output==11){console.log();}else{}
   .catch(function(err){
 	  console.log("error"); 
 })
-
 messaging.onMessage(function(payload){
+  
 });
-$.post('include/save-session-id.php',{},function(output){})
+
+
+$.post('include/save-session-id.php',{},function(output){});
 
 </script>
 

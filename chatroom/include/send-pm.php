@@ -98,18 +98,12 @@ define( 'API_ACCESS_KEY', 'AAAA9MLkv08:APA91bFsKwI5qg-P2TSU2QAv0zSxe1FsYQeLrJ9C8
 $registrationIds ="$row[token_id]";
 
 // prep the bundle
-$msg = array
-('title'		=> 'MyChatHub',
-	'body' => 'New Message Received',
-	'click_action' => 'https://www.mychathub.in',
-    'icon'=> 'https://i.ibb.co/ckRLT5h/icon-256x256.png',
-    'priority'=> 'high'
-);
+$msg=array('title'=> 'MyChatHub'); 
+
 
 $fields = array
 (
-	'registration_ids' 	=> array($registrationIds),
-	'notification'		=> $msg
+	'registration_ids' 	=> array($registrationIds)
 );
  
 $headers = array
