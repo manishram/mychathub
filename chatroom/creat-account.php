@@ -40,9 +40,40 @@ if($count_username_row==0 && $count_email_row==0 && $is_username_valid && $usern
 $sql = "INSERT INTO users (user_id,username,email,password,account_created) values('$user_id','$username','$email','$pass','$account_created')";	
 if(mysqli_query($conn,$sql))
 {
+$sql = "SELECT*FROM users WHERE (username='$username' AND password='$pass')";
+$signin_query = mysqli_query($conn,$sql);
+$user_row=mysqli_fetch_array($signin_query);	
+   
+    $original_url='https://'.$_SERVER['HTTP_HOST']; //try with all urls above
 
+    $pieces = parse_url($original_url);
+    $domain = isset($pieces['host']) ? $pieces['host'] : '';
+    if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $regs)) {
+	$host = $regs['domain'];}
+	if(isset($host)){}else{$host='localhost';}
+	
+	
+	//To delte previous sessions if any....(don't delete this block of code)
+	if(isset( $_SESSION['username'])){unset($_SESSION['username']);session_destroy();}	
+	
+	if(isset($_COOKIE['cookie_username'])){setcookie('cookie_username', $_COOKIE['cookie_username'], time() - (86400 * 7), "/",$host); 
+	unset($_COOKIE['cookie_username']);}
+	if(isset($_COOKIE['cookie_session_id'])){setcookie('cookie_session_id', $_COOKIE['cookie_session_id'], time() - (86400 * 7), "/",$host);
+	unset($_COOKIE['cookie_session_id']);}
+	
 	session_start();
-	$_SESSION['username']=$username;
+	$session_id = session_id();
+	setcookie('cookie_username', $user_row['username'], time() + (86400 * 7), "/",$host);
+	setcookie('cookie_session_id', session_id(), time() + (86400 * 7), "/",$host);
+    $_SESSION['username']=$user_row['username'];
+	
+	
+	
+
+$sql = "UPDATE users SET session_id='$session_id' where username='$_SESSION[username]' AND user_rank!='0'";
+if(mysqli_query($conn,$sql)){}else{echo mysqli_error($conn);}
+
+
 	echo"1";
 	
 
@@ -52,4 +83,5 @@ else{header("Location: signup.php");
 die();}
 
 }
+
 ?>

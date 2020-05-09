@@ -39,6 +39,7 @@ if(isset($_POST['keepsigned']) && $keepsigned=='1')
 
 	//To delte previous sessions if any....(don't delete this block of code)
 	if(isset( $_SESSION['username'])){unset($_SESSION['username']);session_destroy();}	
+	
 	if(isset($_COOKIE['cookie_username'])){setcookie('cookie_username', $_COOKIE['cookie_username'], time() - (86400 * 7), "/",$host); unset($_COOKIE['cookie_username']);}
 	if(isset($_COOKIE['cookie_session_id'])){setcookie('cookie_session_id', $_COOKIE['cookie_session_id'], time() - (86400 * 7), "/",$host); unset($_COOKIE['cookie_session_id']);}
 	
@@ -56,7 +57,8 @@ else
 if(isset( $_SESSION['username'])){unset($_SESSION['username']);session_destroy();}	
 	if(isset($_COOKIE['cookie_username'])){setcookie('cookie_username', $_COOKIE['cookie_username'], time() - (86400 * 7), "/",$host); unset($_COOKIE['cookie_username']);}
 	if(isset($_COOKIE['cookie_session_id'])){setcookie('cookie_session_id', $_COOKIE['cookie_session_id'], time() - (86400 * 7), "/",$host); unset($_COOKIE['cookie_session_id']);}
-	
+
+
 session_start();
 $_SESSION['username']= $user_row['username'];	
 	
@@ -73,8 +75,9 @@ $session_id = session_id();
 
 $sql = "UPDATE users SET session_id='$session_id' where username='$_SESSION[username]' AND user_rank!='0'";
 if(mysqli_query($conn,$sql)){}else{echo mysqli_error($conn);}
-}
 
+
+}
 else{echo"0";}	
 
 
