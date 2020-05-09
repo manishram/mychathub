@@ -7,10 +7,10 @@ include"include/app-data.php";
 
 include"conn.php";
 
-if(!(isset($_SESSION['username'])) && (!isset($_COOKIE['cookie_username']) && !isset($_COOKIE['cookie_session_id']))){header("Location: index.php");
+if(!isset($_SESSION['username']) && (!isset($_COOKIE['cookie_username']) && !isset($_COOKIE['cookie_session_id']))){header("Location: index.php");
 die();}
 else{
-if(isset($_SESSION['username']))
+if(isset($_SESSION['username'])&&(!isset($_COOKIE['cookie_username']) && !isset($_COOKIE['cookie_session_id'])))
 {
 $username=$_SESSION['username'];
 $sql = "SELECT*from users where username='$username' ";
@@ -499,13 +499,13 @@ $('body').delegate(".user-profile-trigger-class","click",function(){
 
 	$(document).ready(function() {
 
-$.get('include/update-active-status.php');
+$.post('include/update-active-status.php');
 update_room_members();
 });
 
 var update_active=function()
 {
-$.get('include/update-active-status.php');
+$.post('include/update-active-status.php');
 }
 
 setInterval(update_active,30000);

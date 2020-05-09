@@ -4,7 +4,7 @@ if(!isset($_SESSION['username'])){die();}
 
 ?> 
 	<?php include('include/emoji-picker.php');   ?>
-<div id="msg-input-div" class='box-header ' style='position:sticky;bottom:0;z-index:1000;background-color:#919696;width:100%;height:50px;padding:5px;'>
+<div id="msg-input-div" class='box-header ' style='position:sticky;bottom:0;z-index:0;background-color:#919696;width:100%;height:50px;padding:5px;'>
 
 <div class='row'>
 	

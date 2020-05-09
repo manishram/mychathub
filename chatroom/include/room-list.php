@@ -57,7 +57,7 @@ if(!isset($_SESSION['username'])){die();}
 							<!----left main col body content --->
 						
 				<div id='parent-of-room-list' style=''>
-				<span style=' position: absolute;margin: auto;top: 0;bottom: 0;left: 0;right: 0float:right;display:none;margin-left:47%;z-index:1000;' class='spinner' id='room-search-loading'></span>
+				<span style=' position: absolute;margin: auto;top: 0;bottom: 0;left: 0;right: 0float:right;display:none;margin-left:47%;z-index:0;' class='spinner' id='room-search-loading'></span>
 				<div  id='list-of-rooms'>	
 				<div class='row'>
 <?php
@@ -164,7 +164,7 @@ echo"
         
 		
 		
-		<div id="msg-input-div-2" class='box-header ' style='position:fixed;bottom:0;z-index:100;padding:1px;background-color:#919696;width:100%;height:50px;box-shadow:0 -1px 2px rgba(0, 0, 0, 0.15), 0 -1px 0px rgba(0, 0, 0, 0.02) ;'><div class='row'>
+		<div id="msg-input-div-2" class='box-header ' style='position:fixed;bottom:0;z-index:0;padding:1px;background-color:#919696;width:100%;height:50px;box-shadow:0 -1px 2px rgba(0, 0, 0, 0.15), 0 -1px 0px rgba(0, 0, 0, 0.02) ;'><div class='row'>
 						<div class="input-group " style='margin:3px 20px 0px 15px' >        
 		<br><form class="conversation-compose" id='' >
                 <div class="emoji">

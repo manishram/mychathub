@@ -3,7 +3,7 @@ if (session_status() == PHP_SESSION_NONE) {session_start();}
 if(!isset($_SESSION['username'])){die();}
 
 ?>
-<div id="msg-input-div" class='box-header ' style='z-index:1000;background-color:#919696;width:100%;height:50px;padding:5px;;box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.15), 0 -1px 0px rgba(0, 0, 0, 0.02);'><div class='row'>
+<div id="msg-input-div" class='box-header ' style='z-index:0;background-color:#919696;width:100%;height:50px;padding:5px;;box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.15), 0 -1px 0px rgba(0, 0, 0, 0.02);'><div class='row'>
 						<div class="input-group " style='margin:0px 20px 0px 15px' >        
 		<br><form class="conversation-compose" id='' >
                 <div class="emoji">
