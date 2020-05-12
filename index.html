@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-US" class="">
+
+     
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title> MyChatHub - Online Chat Rooms For Everyone |  Free And Without Registration</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#0cc2aa">
+<meta name="description" content="MyChatHub provides free online chat rooms of your interest. Select the chat room and get started for free without registration.">
+<meta name="keywords" content="chat, chat rooms, chatroom, chatrooms, free chat without registration, chat with strangers, online chat">
+
+
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MyChatHub - Online Chat Rooms For Everyone |  Free And Without Registration">
+<meta property="og:description" content="MyChatHub provides free online chat rooms of your interest. Select the chat room and get started for free without registration.">
+<meta property="og:url" content="https://www.mychathub.in">
+<meta property="og:site_name" content="MyChatHub">
+<meta property="og:image" content="https://www.mychathub.in/assets/img/mychathub-screenshot.png">
+
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="MyChatHub" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#0a8d7c"/>
+
+  <!-- icons -->
+<link href="assets/img/favicon.png" rel="icon">
+
+<link rel="icon" sizes="128x128" href="assets/img/icons/icon-128x128.png">
+<link rel="apple-touch-icon" sizes="128x128" href="assets/img/icons/icon-128x128.png">
+<link rel="icon" sizes="192x192" href="assets/img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="assets/img/icons/icon-192x192.png">
+<link rel="icon" sizes="256x256" href="assets/img/icons/icon-256x256.png">
+<link rel="apple-touch-icon" sizes="256x256" href="assets/img/icons/icon-256x256.png">
+<link rel="icon" sizes="384x384" href="assets/img/icons/icon-384x384.png">
+<link rel="apple-touch-icon" sizes="384x384" href="assets/img/icons/icon-384x384.png">
+<link rel="icon" sizes="512x512" href="assets/img/icons/icon-512x512.png">
+<link rel="apple-touch-icon" sizes="512x512" href="assets/img/icons/icon-512x512.png">
+
+
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel='manifest' href='/manifest.json'>
+
+
+  
+  <script>
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('firebase-messaging-sw.js')
+      .then(reg => {
+        console.log('Service worker registered! 😎', reg);
+      })
+      .catch(err => {
+        console.log('😥 Service worker registration failed: ', err);
+      });
+  });
+}
+  </script>
+</head>
+
+<body>
+
+
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        
+     <a href="#intro"><img src="assets/img/logo.svg" style="height:50px;margin-top:-10px" alt="White logo of MyChatHub"></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#team">Team</a></li>
+          
+          <li><a href="#contact">Contact Us</a></li>
+		  <li class="menu-has-children"><a href="#" id="installBtn">Download</a>
+           
+          </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Intro Section ======= -->
+  <section id="intro">
+
+    <div class="intro-text">
+      <h2>Welcome to MyChatHub</h2>
+      <p>
+	  MyChatHub provides you different chat rooms of your interests.
+	  </p>
+      <a href="/chatroom/signin.php" class="btn-get-started scrollto">Get Started</a>
+    </div>
+
+    <div class="product-screens">
+
+      <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
+        <img src="assets/img/product-screen-1.png" alt="MychatHub chat room Screen illustarion screenshot">
+      </div>
+
+      <div class="product-screen-2 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
+        <img src="assets/img/product-screen-2.png" alt="MychatHub chat rooms list illustarions creenshot ">
+      </div>
+
+      <div class="product-screen-3 wow fadeInUp" data-wow-duration="0.6s">
+        <img src="assets/img/product-screen-3.png" alt="MychatHub side navigation illustarion screenshot">
+      </div>
+
+    </div>
+
+  </section><!-- End Intro Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header" style="margin-bottom:50px;">
+          <h3 class="section-title">What is MyChatHub?</h3>
+          <span class="section-divider"></span>
+          <p class="section-description" style="max-width:700px;margin:auto">
+           MyChatHub is a social platform where you have different chat rooms for different topics. You can enter the room and join the conversation with other members who are interested in the topic of the room. You can get answers to your problem, explore new ideas by interacting with people and lots of other potentials.
+          </p>
+        </div>
+         
+        <div class="row">
+          <div class="col-lg-6 about-img wow fadeInLeft">
+            <img src="assets/img/about.png" alt="MychatHub- llutration of happy young people">
+          </div>
+
+          <div class="col-lg-6 content wow fadeInRight"><br><br>
+            <b><h2>Reasons why people love chat rooms like MyChatHub</h2></b>
+             <p>The Internet has changed the way we communicate with people around the world, and hence there are lots of reasons why chat rooms are so famous, some of those reasons are pointed out here:
+            </p>
+
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i> <b>Anonymity.: </b> This is the most common reason why people love to use chat rooms. Y'all are anonymous. People don't know you personally. They only know what you have told them about yourself.</li>
+              <br>
+			  <li><i class="ion-android-checkmark-circle"></i> <b>Chat with strangers: </b> It's human nature to enjoy surprises and new people are full of surprises. That is why people like to chat with strangers online. It's fun to know about other people, their likes and dislikes, etc.</li>
+			  <br>
+			  <li><i class="ion-android-checkmark-circle"></i> <b>Get problems solved: </b> People in different chat rooms are likely to be smart enough on the topic of that chatroom and he or she may help you solve your problem in that specific filed. For example, you can join the "Developers" room and you can ask questions to others related to programming.</li>
+			  <br>
+			   <li><i class="ion-android-checkmark-circle"></i> <b>Don't feel lonely: </b> It's very easy to log in and have a bunch of people you can talk to and share ideas and thoughts. If you are depressed, there are rooms where you can find people to share your heavy heart and get your mood lighted.</li>
+            
+            </ul>
+
+            <p>
+              Chat rooms are here for decades, people come to escape tense life and have a nice time chatting with people from all around the world. There are lots of rooms on our website, which will suit you according to your interests.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Featuress Section ======= -->
+    <section id="features">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8 offset-lg-4">
+            <div class="section-header wow fadeIn" data-wow-duration="1s">
+              <h3 class="section-title">Features of MyChatHub</h3>
+              <span class="section-divider"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 features-img">
+            <img src="assets/img/product-features.png" alt="Features of Mychathub" class="wow fadeInLeft">
+          </div>
+
+          <div class="col-lg-8 col-md-7 ">
+
+            <div class="row">
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="fa fa-mobile" aria-hidden="true"></i><i class="fa fa-laptop" aria-hidden="true"></i></div>
+                <h4 class="title"><a href="">Responsive</a></h4>
+                <p class="description">MyChatHub has a responsive user interface so that you can use it with compatibility in both your phone or computer. </p>
+              </div>
+              <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
+                <div class="icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                <h4 class="title"><a href="">Real-Time</a></h4>
+                <p class="description">MyChatHub uses web-socket technology to provide you a real-time interface to interact with.</p>
+              </div>
+			  <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
+                <div class="icon"><i class="fa fa-cloud-download" aria-hidden="true"></i></div>
+                <h4 class="title"><a href="">Progressive Web App</a></h4>
+                <p class="description">Add our web app to your home screen by clicking the download button on the top and experience the fast and native app-like version of our chatroom.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
+                <div class="icon"><i class="fa fa-bell-o" aria-hidden="true"></i></div>
+                <h4 class="title"><a href="">Push Notification</a></h4>
+                <p class="description">The push notification feature is available to keep you updated with new messages and notifications. Allow notification permission to use this feature.</p>
+              </div>
+              
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Featuress Section -->
+
+    <!-- ======= Advanced Featuress Section ======= -->
+    <section id="advanced-features">
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <center><img class="advanced-feature-img-right wow fadeInRight" src="assets/img/feature.png" style="height:400px;" alt="How to get started with MyChatHub"></center>
+              <div class="wow fadeInLeft">
+                <h2>How to get started with MyChatHub?</h2>
+                
+                <p>MyChatHub can be used by registering your account with <b>username</b>, <b>email</b> and <b>password</b> only or you can even visit as a guest. To create a guest account you only need to choose a <b>username</b> and your temporary account will be created for one-time use.</p>
+                <p>
+				After that, you will be listed with the number of chat rooms. You can use search to find rooms of your interest and then hit the <b>Enter Room</b> button. You can chat either personally with the people in that room by sending personal messages or you can chat in the main chat box that room.
+				</p>
+				
+				<p>
+				You can send text messages, share images, videos, or audios (up to 4mb) with others. You can also share the direct link of images, videos, or audios from other sites, and the file will be instantly shown on the screen. You can tag members in a room by clicking their name or by even writing their name.
+				</p>
+				
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-left" src="assets/img/advanced-feature-2.png" height="400" alt="Anonymity tips from MyChatHub">
+              <div class="wow fadeInRight">
+                <h2>Anonymity tips from MyChatHub</h2>
+                <i class="ion-checkmark" class="wow fadeInRight" data-wow-duration="0.5s"></i>
+                <p class="wow fadeInRight" data-wow-duration="0.5s">
+				Use premium VPN services to access website so as to protect your IP address from leaking in any way from hackers or frauds.
+				</p>
+                <i class="ion-thumbsdown wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
+                <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">
+				Don't tell anyone your personal details unless you trust that person. It's your responsible to keep yourself safe from hackers and spammers on the internet.
+				</p>
+                <i class="ion-close-round wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">
+				Do not share your image, media or any other social ID with others that can potentially harm your anonymity.
+				</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      </div>
+    </section><!-- End Advanced Featuress Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+
+
+    <!-- ======= More Features Section ======= -->
+    <section id="more-features" class="section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">More Features</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <div class="icon"><i class="ion-android-happy"></i></div>
+              <h4 class="title"><a href="">Lots of emojis</a></h4>
+              <p class="description">Lots of emojis to make you conversation interesting and fun. Share you every emotion with emojies.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="ion-ios-people-outline"></i></div>
+              <h4 class="title"><a href="">Make you own rooms</a></h4>
+              <p class="description">Create you own rooms and invite your friends and enjoy with them.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <div class="icon"><i class="ion-minus-circled"></i></div>
+              <h4 class="title"><a href="">Block annoying people</a></h4>
+              <p class="description">Don't get your inbox filled with spams. Block those people who are annoying.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="ion-earth"></i></div>
+              <h4 class="title"><a href="">People from all around the world</a></h4>
+              <p class="description">Get connected globally to people all around the world from different corners.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End More Features Section -->
+
+   
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">Pricing</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">We have three different plans, for our chatroom with very liberal pricing</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box wow fadeInLeft">
+              <h3>Guest</h3>
+              <h4><sup>$</sup>0<span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Chat in rooms</li>
+				<li><i class="ion-android-checkmark-circle"></i> Personal chat Messages</li>
+				<li><i class="ion-close-circled"></i> Share media files</li>
+				<li><i class="ion-close-circled"></i> Add to friend list</li>
+				<li><i class="ion-close-circled"></i> Animated emojies</li>
+				<li><i class="ion-close-circled"></i> Stylish stickers</li>
+				<li><i class="ion-close-circled"></i> Video Call</li>
+				<li><i class="ion-close-circled"></i> Create New Room</li>
+              </ul>
+              <a href="chatroom/guest-login.php" class="get-started-btn">Visit as Guest</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box featured wow fadeInUp">
+              <h3>Member</h3>
+              <h4><sup>$</sup>0<span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Chat in rooms</li>
+				<li><i class="ion-android-checkmark-circle"></i> Personal chat Messages</li>
+				<li><i class="ion-android-checkmark-circle"></i> Share media files</li>
+				<li><i class="ion-android-checkmark-circle"></i> Add to friend list</li>
+				<li><i class="ion-close-circled"></i> Animated emojies</li>
+				<li><i class="ion-close-circled"></i> Stylish stickers</li>
+				<li><i class="ion-close-circled"></i> Video Call</li>
+				<li><i class="ion-close-circled"></i> Create New Room</li>
+              </ul>
+              <a href="chatroom/signup.php" class="get-started-btn">Register Now</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="box wow fadeInRight">
+              <h3>Premium</h3>
+              <h4><sup>$</sup>5<span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Chat in rooms</li>
+				<li><i class="ion-android-checkmark-circle"></i> Personal chat Messages</li>
+				<li><i class="ion-android-checkmark-circle"></i> Share media files</li>
+				<li><i class="ion-android-checkmark-circle"></i> Add to friend list</li>
+				<li><i class="ion-android-checkmark-circle"></i> Animated emojies</li>
+				<li><i class="ion-android-checkmark-circle"></i> Stylish stickers</li>
+				<li><i class="ion-android-checkmark-circle"></i> Video Call</li>
+				<li><i class="ion-android-checkmark-circle"></i> Create New Room</li>
+              </ul>
+              <a href="#" class="get-started-btn"  disabled="true">Comming Soon</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">Frequently Asked Questions</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">We have listed out some of the frequently asked questions with their answer to help you when you need</p>
+        </div>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">What are green and red dots that appear next to the user's profile picture? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                These dots tell about the online status of the user. If it is a green dot that means the user is online and if it is a red dot that means the user is offline.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">How to change my profile picture? <i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">What to do if somebody continously sending annoying messages?<i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                If somebody is annoying you, then just click on their profile image, their profile tab will appear. You will see a red color <b>Block</b> button, click that button and he or she won't be able to send you messages anymore.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">MyChatHub is PWA? What is Progressive Web App (PWA)?<i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                Yes, MyChatHub is a Progressive Web App. You can install it on your phone or desktop by clicking the download button above. For information about PWA, for more information please refer to <a style="display:inline;font-size:15px;" href="https://developers.google.com/web/ilt/pwa"><b>PWA</b></a>
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Why I am prompted asking permission for notification? <i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                Our chat room supports the push notification feature so that you will be instantly notified when you get messages. We need your permission to show those push notifications.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed">Can I join MyChatHub Developer Team? <i class="ion-android-remove"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+                Yes, we are looking for developers to grow our platform. If you are interested to join our MyChatHub family please contact us at our email: <a style="font-size:15px;" href="mailto:contact@mychathub.in">contact@mychathub.in</a>
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Team Section ======= -->
+	
+	
+	   <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-title">Team</h3>
+          <span class="section-divider"></span>
+          
+        </div>
+        <div class="row wow fadeInUp">
+          <div style="margin:auto;">
+           <div class="member">
+              <div class=""><img width="200" src="assets/img/team/admin.png" alt="Manish Ram avatar - Developer and Admin of Mychathub"></div>
+              <h4>Manish Ram</h4>
+              Admin
+              <div class="social">
+                <a href="https://www.github.com/manishram" target="_blank" ><i class="fa fa-github"></i></a>
+                <a href="https://www.twitter.com/manishram_" target="_blank" ><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/manish-ram-9905511a5" target="_blank" ><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+	<!-- End Team Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+      <div class="container">
+        <div class="row wow fadeInUp">
+
+          <div class="col-lg-6 col-md-6">
+            <div class="contact-about">
+              <img src="assets/img/mychathub-logo.svg" style="height:50px;margin-top:-10px" alt="Green logo of MyChatHub"></img><br>
+			   
+			  <br>
+			  <div class="info">
+			   <div> 
+			   
+                <i class="ion-ios-email-outline"></i>
+                <p>contact@mychathub.in</p>
+              </div>
+			  <div> 
+			   
+                <i class="ion-location"></i>
+                <p>INDIA</p>
+              </div>
+			  </div>
+              <p>
+			  
+			  </p>
+              <div class="social-links">
+                <a href="https://twitter.com/mychathub" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/mychathub" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/mychathub" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="col-lg-6 col-md-6">
+            <div class="form">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                    <div class="validate"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            Copyright &copy; 2020 <strong>MyChatHub</strong>. All Rights Reserved
+          </div>
+          
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="privacy-policy">Privacy Policy</a>
+            <a href="terms">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/wow/wow.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script>
+  window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault()
+  deferredPrompt = e
+})
+
+const btnInstallApp = document.getElementById('installBtn');
+
+if(btnInstallApp) {
+  btnInstallApp.addEventListener('click', e => {
+    deferredPrompt.prompt()
+    deferredPrompt.userChoice
+      .then(choiceResult => {
+        if(choiceResult.outcome === 'accepted') {
+          console.log('user accepted A2HS prompt')
+        } else {
+          console.log('user dismissed A2HS prompt')
+        }
+        deferredPrompt = null
+      })
+    })
+}
+</script>
+</body>
+</html>

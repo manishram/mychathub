@@ -53,7 +53,7 @@ include('include/guest-username-modify.php');
   <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
-  
+  <link href="../assets/img/favicon.png" rel="icon">
   <!-- style -->
   <link rel="stylesheet" href="../assets/animate.css/animate.min.css" type="text/css" />
   <link rel="stylesheet" href="../assets/glyphicons/glyphicons.css" type="text/css" />
@@ -67,6 +67,7 @@ include('include/guest-username-modify.php');
   <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
 
   <script src="../libs/jquery/jquery/dist/jquery.js"></script>  
+  
   <link rel="stylesheet" href="../assets/styles/style.css" type="text/css" />
    <style>
 /* Compose */
@@ -217,16 +218,18 @@ function requestNotificationsPermissions() {
 }
 </script>
 
-  <link rel="icon" sizes="128x128" href="../images/touch/icon-128x128.png">
-<link rel="apple-touch-icon" sizes="128x128" href="../images/touch/icon-128x128.png">
-<link rel="icon" sizes="192x192" href="icon-192x192.png">
-<link rel="apple-touch-icon" sizes="192x192" href="../images/touch/icon-192x192.png">
-<link rel="icon" sizes="256x256" href="../images/touch/icon-256x256.png">
-<link rel="apple-touch-icon" sizes="256x256" href="../images/touch/icon-256x256.png">
-<link rel="icon" sizes="384x384" href="../images/touch/icon-384x384.png">
-<link rel="apple-touch-icon" sizes="384x384" href="../images/touch/icon-384x384.png">
-<link rel="icon" sizes="512x512" href="../images/touch/icon-512x512.png">
-<link rel="apple-touch-icon" sizes="512x512" href="../images/touch/icon-512x512.png">
+<link href="assets/img/favicon.png" rel="icon">  
+<link rel="icon" sizes="128x128" href="../assets/img/icons/icon-128x128.png">
+<link rel="apple-touch-icon" sizes="128x128" href="../assets/img/icons/icon-128x128.png">
+<link rel="icon" sizes="192x192" href="../assets/img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="../assets/img/icons/icon-192x192.png">
+<link rel="icon" sizes="256x256" href="../assets/img/icons/icon-256x256.png">
+<link rel="apple-touch-icon" sizes="256x256" href="../assets/img/icons/icon-256x256.png">
+<link rel="icon" sizes="384x384" href="../assets/img/icons/icon-384x384.png">
+<link rel="apple-touch-icon" sizes="384x384" href="../assets/img/icons/icon-384x384.png">
+<link rel="icon" sizes="512x512" href="../assets/img/icons/icon-512x512.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../assets/img/icons/icon-512x512.png">
+
   <link rel='manifest' href='../manifest.json'>
   <script type="module">
   /**
@@ -824,6 +827,17 @@ messaging.onMessage(function(payload){
 
 
 $.post('include/save-session-id.php',{},function(output){});
+
+conn.onopen = function(e) {
+    console.log("Connection established!");
+	var ws_data=JSON.stringify({"data":myrmdat,"action":"update_members"});
+	conn.send(ws_data);
+};
+
+
+
+
+
 
 </script>
 

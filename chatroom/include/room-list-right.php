@@ -5,10 +5,11 @@ if(!isset($_SESSION['username'])){die();}
 
 include_once('conn.php');
 $time_check=time()-60;
-$room_query = "SELECT * FROM rooms ORDER BY (SELECT COUNT(*) FROM users WHERE (active_room=room_id) AND (last_active>$time_check) AND (online=1)) DESC, room_name ASC";
+$room_query = "SELECT * FROM rooms ORDER BY (SELECT COUNT(*) FROM users WHERE (active_room=$room_id) AND (last_active>$time_check) AND (online=1)) DESC, room_name ASC";
 $room_data=mysqli_query($conn,$room_query);
 while($row = mysqli_fetch_array($room_data)){
 $time_check=time()-60;
+
 $count_members_query = "SELECT*FROM users WHERE (active_room='$row[room_id]') AND (last_active>$time_check) AND (online=1)";
 $count_members_query_x=mysqli_query($conn,$count_members_query);
 $count_members=mysqli_num_rows($count_members_query_x);

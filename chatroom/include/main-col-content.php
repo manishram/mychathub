@@ -88,6 +88,7 @@ $b=mysqli_query($conn,$a);
 $i=0;
 while($c = mysqli_fetch_array($b))
 {
+	
     $str = $c['msg'];
 	$file="include/emoji/emoji_1.txt";
     $file_2="include/emoji/emoji_2.txt";
@@ -114,6 +115,9 @@ if($z['username']==$_SESSION['username']){
 		$report_post=" <small msgid=$c[id] title='Report' class='text-muted' style='cursor:pointer;font-size:10px;float:right;'><i class='fas fa-flag'>  </i></small>";
 		}
 		 if($z['profile_pic']==""){$profile_pic="user_default.jpg";}else{$profile_pic="thumbnails/thumb_x_sm_$z[profile_pic]";}
+		 $time_check=time()-120;
+	
+	if((intval($z['last_active'])>$time_check)) {$active_status="on";}else{$active_status="busy";} //active status of users
 echo
 "
 <div class='msg_div_box' style='border-left:$left_border;background:$my_post_bg;border-bottom:0.5px solid $my_post_border_bottom;'>
@@ -121,7 +125,7 @@ echo
 			                <a data-toggle='modal'  data-target='#profile_2 ' value='$z[user_id]' class='list-left user-profile-trigger-class'>
 			                	<span class='avatar' style='height:40px;width:40px;'>
 				                  <img style='height:40px;width:40px;' class='profile-pic' src='../chatroom/upload/profile_pic/$profile_pic' alt='$z[username]'>
-				                  <i class='on b-white bottom'></i>
+				                  <i class='$active_status b-white bottom'></i>
 				                </span>
 			                </a>
 	<div class='list-body'>

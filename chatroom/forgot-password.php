@@ -5,15 +5,23 @@
     <title>MyChatHub | Forgot Password</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="MyChatHub is a social platform where you can join rooms of your interest and interact with people in that room.">
-<link rel="canonical" href="https://www.mychathub.in/">
 <meta name="theme-color" content="#0cc2aa">
+<meta name="description" content="Forgot your password? You can recover your password of mychathub chat room by providing your username and you will receive email with step to recover your password.">
+<meta name="keywords" content="forgot password, mychathub, login to mychathub, signin mychathub, signin, chat, chat rooms, chatroom, chatrooms, free chat without registration, chat with strangers, online chat">
+
+
+
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
-<meta property="og:title" content="MyChatHub - Forgot Password">
-<meta property="og:description" content="MyChatHub is a social platform where you can join rooms of your interest and interact with people in that room.">
-<meta property="og:url" content="https://www.mychathub.in/chatroom/forgot-password.php">
+<meta property="og:title" content="MyChatHub - Online Chat Rooms For Everyone |  Free And Without Registration">
+<meta property="og:description" content="MyChatHub provides free online chat rooms of your interest. Select the chat room and get started for free without registration.">
+<meta property="og:url" content="https://www.mychathub.in/chatroom/guest-login.php">
 <meta property="og:site_name" content="MyChatHub">
+<meta property="og:image" content="https://www.mychathub.in/assets/img/mychathub-screenshot.png">
+
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="MyChatHub" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#0a8d7c"/>
 
   <!-- style -->
   <link rel="stylesheet" href="../assets/animate.css/animate.min.css" type="text/css" />
@@ -26,6 +34,7 @@
   <link rel="stylesheet" href="../assets/styles/app.css" type="text/css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
+  <link href="../assets/img/favicon.png" rel="icon">
 </head>
 <body>
   <div class="app" id="app">

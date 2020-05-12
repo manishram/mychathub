@@ -16,16 +16,26 @@ else{}
   <meta charset="utf-8" />
   <title>MyChatHub | Singin To Enter Chatroom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="MyChatHub is a social platform where you can join rooms of your interest and interact with people in that room.">
-<link rel="canonical" href="https://www.mychathub.in/">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="theme-color" content="#0cc2aa">
+<meta name="description" content="Signin page for registered users. Enter your username and password and you will enter your chat room.">
+<meta name="keywords" content="login to mychathub, signin mychathub, signin, chat, chat rooms, chatroom, chatrooms, free chat without registration, chat with strangers, online chat">
+
+
+
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
-<meta property="og:title" content="MyChatHub - Signin To Enter Chatroom">
-<meta property="og:description" content="MyChatHub is a social platform where you can join rooms of your interest and interact with people in that room.">
+<meta property="og:title" content="MyChatHub - Online Chat Rooms For Everyone |  Free And Without Registration">
+<meta property="og:description" content="MyChatHub provides free online chat rooms of your interest. Select the chat room and get started for free without registration.">
 <meta property="og:url" content="https://www.mychathub.in/chatroom/signin.php">
 <meta property="og:site_name" content="MyChatHub">
+<meta property="og:image" content="https://www.mychathub.in/assets/img/mychathub-screenshot.png">
+
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="MyChatHub" />
+<meta name="apple-mobile-web-app-status-bar-style" content="#0a8d7c"/>
+
 
 
   <!-- style -->
@@ -40,17 +50,18 @@ else{}
   <!-- endbuild -->
   <link rel="stylesheet" href="../assets/styles/font.css" type="text/css" />
   
-  
-  <link rel="icon" sizes="128x128" href="../images/touch/icon-128x128.png">
-<link rel="apple-touch-icon" sizes="128x128" href="../images/touch/icon-128x128.png">
-<link rel="icon" sizes="192x192" href="icon-192x192.png">
-<link rel="apple-touch-icon" sizes="192x192" href="../images/touch/icon-192x192.png">
-<link rel="icon" sizes="256x256" href="../images/touch/icon-256x256.png">
-<link rel="apple-touch-icon" sizes="256x256" href="../images/touch/icon-256x256.png">
-<link rel="icon" sizes="384x384" href="../images/touch/icon-384x384.png">
-<link rel="apple-touch-icon" sizes="384x384" href="../images/touch/icon-384x384.png">
-<link rel="icon" sizes="512x512" href="../images/touch/icon-512x512.png">
-<link rel="apple-touch-icon" sizes="512x512" href="../images/touch/icon-512x512.png">
+<link href="../assets/img/favicon.png" rel="icon">
+
+<link rel="icon" sizes="128x128" href="../assets/img/icons/icon-128x128.png">
+<link rel="apple-touch-icon" sizes="128x128" href="../assets/img/icons/icon-128x128.png">
+<link rel="icon" sizes="192x192" href="../assets/img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="../assets/img/icons/icon-192x192.png">
+<link rel="icon" sizes="256x256" href="../assets/img/icons/icon-256x256.png">
+<link rel="apple-touch-icon" sizes="256x256" href="../assets/img/icons/icon-256x256.png">
+<link rel="icon" sizes="384x384" href="../assets/img/icons/icon-384x384.png">
+<link rel="apple-touch-icon" sizes="384x384" href="../assets/img/icons/icon-384x384.png">
+<link rel="icon" sizes="512x512" href="../assets/img/icons/icon-512x512.png">
+<link rel="apple-touch-icon" sizes="512x512" href="../assets/img/icons/icon-512x512.png">
 
 
  
