@@ -30,7 +30,8 @@ $row = mysqli_fetch_array($sql_query);
 						      <img src="../chatroom/upload/cover_pic/<?php if($row['cover_pic']==""){echo "user_default.jpg";}else{echo $row['cover_pic'];}?>" class="blur">
 						    </div>
 						    <div class="p-a-lg pos-rlt text-center">
-						    	<img src="../chatroom/upload/profile_pic/<?php if($row['profile_pic']==""){echo "user_default.jpg";}else{echo $row['profile_pic'];}?>" class="img-circle w-56" style="margin-bottom: -7rem">
+						    	<img src="../chatroom/upload/profile_pic/<?php if($row['profile_pic']==""){echo "user_default.jpg";}
+								else{echo "thumbnails/thumb_x_sm_$row[profile_pic]";}?>" class="img-circle w-56" style="margin-bottom: -7rem">
 						    </div>
 						</div>
 					    <div class="p-a text-center">

@@ -45,6 +45,7 @@ include('include/guest-username-modify.php');
   <meta name="viewport" content="width=device-width, height=device-height">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="theme-color" content="#0cc2aa">
+
   <!-- for ios 7 style, multi-resolution icon of 152x152 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
@@ -819,7 +820,7 @@ if(output==11){console.log();}else{}
 			 });
   })
   .catch(function(err){
-	  console.log("error"); 
+	  console.log(err); 
 })
 messaging.onMessage(function(payload){
   

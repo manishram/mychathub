@@ -117,8 +117,8 @@ self.addEventListener('push', function(event) {
     var body = {
         'body': x+' New Message Received',
         'tag': 'msg',
-        'icon': '../images/touch/icon-192x192.png',
-        'badge': '../images/touch/icon-192x192.png',
+       'icon': '../assets/img/icons/icon-192x192.png',
+        'badge': '../assets/img/badge/badge.png',
         actions: [
           {action: 'open', title: 'Open'},
           {action: 'close', title: 'Close'},

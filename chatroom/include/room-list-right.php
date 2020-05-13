@@ -5,7 +5,7 @@ if(!isset($_SESSION['username'])){die();}
 
 include_once('conn.php');
 $time_check=time()-60;
-$room_query = "SELECT * FROM rooms ORDER BY (SELECT COUNT(*) FROM users WHERE (active_room=$room_id) AND (last_active>$time_check) AND (online=1)) DESC, room_name ASC";
+$room_query = "SELECT * FROM rooms ORDER BY (SELECT COUNT(*) FROM users WHERE (active_room=room_id) AND (last_active>$time_check) AND (online=1)) DESC, room_name ASC"; // room_id is column name
 $room_data=mysqli_query($conn,$room_query);
 while($row = mysqli_fetch_array($room_data)){
 $time_check=time()-60;

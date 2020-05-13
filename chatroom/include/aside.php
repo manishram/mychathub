@@ -25,7 +25,7 @@ if(!isset($_SESSION['username'])){die();}
     <div class="nav-fold">
     	<a href="#/app/page/profile" ui-sref="app.page.profile">
         <span class="pull-right m-v-sm hidden-folded">
-          <b class="label rounded success">9</b>
+         
         </span>
         <span class="block">
           <img src="../assets/images/user_default.jpg" alt="..." class="w-40 img-circle">
