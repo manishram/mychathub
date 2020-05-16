@@ -28,7 +28,10 @@ if(!isset($_SESSION['username'])){die();}
          
         </span>
         <span class="block">
-          <img src="../assets/images/user_default.jpg" alt="..." class="w-40 img-circle">
+		 <?php
+ if($row['profile_pic']==""){$profile_pic="user_default.jpg";}else{$profile_pic="thumbnails/thumb_x_sm_$row[profile_pic]";}
+?>
+          <img src="../chatroom/upload/profile_pic/<?php echo $profile_pic;?>" alt="..." class="w-40 img-circle">
         </span>
         <span class="clear hidden-folded m-t-sm">
           <span class="block _500"><?php echo $row['username'];?></span>

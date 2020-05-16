@@ -56,7 +56,8 @@
   <link rel='manifest' href='/manifest.json'>
 
 
-  
+
+
   <script>
 
 if ('serviceWorker' in navigator) {
@@ -81,7 +82,7 @@ if ('serviceWorker' in navigator) {
 
       <div id="logo" class="pull-left">
         
-     <a href="#intro"><img src="assets/img/logo.svg" style="height:50px;margin-top:-10px" alt="White logo of MyChatHub"></a>
+     <a href="#intro"><img src="assets/img/logo.svg" style="height:50px;margin-top:-5px" alt="White logo of MyChatHub"></a>
       </div>
 
       <nav id="nav-menu-container">
@@ -92,10 +93,10 @@ if ('serviceWorker' in navigator) {
           <li><a href="#team">Team</a></li>
           
           <li><a href="#contact">Contact Us</a></li>
-		  <li><a href="#" id="installBtn">Download</a>
+		  
            
           </li>
-        </ul>
+        
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- End Header -->
@@ -108,7 +109,9 @@ if ('serviceWorker' in navigator) {
       <p>
 	  MyChatHub provides you different chat rooms of your interests.
 	  </p>
-      <a href="/chatroom/signin.php" class="btn-get-started scrollto">Get Started</a>
+      <span style=""><a href="/chatroom/signin.php" class="btn-get-started scrollto">&nbsp;Get Started</a>
+	  <a href="#" class="btn-get-started installBtn"><i class="fa fa-download"></i> Download</a>
+	  </span>
     </div>
 
     <div class="product-screens">
@@ -534,6 +537,7 @@ if ('serviceWorker' in navigator) {
                 <a href="https://twitter.com/mychathub" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
                 <a href="https://www.facebook.com/mychathub" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
                 <a href="https://www.instagram.com/mychathub" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.youtube.com/channel/UCEEPpiml7XsiIUeXk34y_1w" target="_blank" class="youtube"><i class="fa fa-youtube"></i></a>
               </div>
             </div>
           </div>
@@ -618,16 +622,14 @@ if ('serviceWorker' in navigator) {
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 <script>
-  window.addEventListener('beforeinstallprompt', e => {
+   window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault()
   deferredPrompt = e
 })
 
-const btnInstallApp = document.getElementById('installBtn');
 
-if(btnInstallApp) {
-  btnInstallApp.addEventListener('click', e => {
-    deferredPrompt.prompt()
+  $('.installBtn').click(function(){
+   deferredPrompt.prompt()
     deferredPrompt.userChoice
       .then(choiceResult => {
         if(choiceResult.outcome === 'accepted') {
@@ -637,8 +639,11 @@ if(btnInstallApp) {
         }
         deferredPrompt = null
       })
-    })
-}
+  });
+
+window.addEventListener('appinstalled', (evt) => {
+  console.log(evt);
+});
 
 $('#send_msg_contact_btn').click(function(event){
 event.preventDefault();

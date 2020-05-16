@@ -25,7 +25,7 @@ $c = mysqli_fetch_array($b);
 						<div class="box-header box-shadow-z2" style='background-color:#e7efee;'>
 							 <a data-toggle="modal" id='aside2-tgl-btn' data-target="#aside_2" style='float:right;'  class="hidden-lg-up mr-3 ">
 							 
-              <font style='color:#0cc2aa;'><i class="material-icons ">&#xe5d2;</i></font>
+              <button style="height:50px;width:50px;position:fixed;bottom:50px;right:10px;" class="md-btn md-fab m-b-sm primary"><i class="fas fa-users fa-lg" style="vertical-align:0px;"></i></button>
 			  
             </a> 
 							<h3> <i class="fa fa-home fa-sm"></i> <?php echo $c['room_name']; ?>  | <a class='leave_room_link' style='color:#0cc2aa'><i style='margin-left:10px;color:#0cc2aa;' class='fas fa-sign-out-alt fa-sm'></i> Exit  </a></h3>

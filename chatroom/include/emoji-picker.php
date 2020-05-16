@@ -1,4 +1,4 @@
-<div class="card bg-light emoji_picker_plate" style="display:none;border:#ccc;box-shadow:0px 0px 2px 1px #c4c4c4;margin-top:-275px;margin-left:30px;max-width: 19rem;">
+<div class="card bg-light emoji_picker_plate" style="z-index:21;display:none;border:#ccc;box-shadow:0px 0px 2px 1px #c4c4c4;margin-top:-275px;margin-left:30px;max-width: 19rem;">
  <div class="card-header ">Emoji Plate
  <span style='float:right;cursor:pointer;' id='close_emoji_picker_btn'><i class='fa fa-times text-muted'></i></span>
  </div>
