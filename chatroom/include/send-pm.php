@@ -92,7 +92,7 @@ $query=mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($query);
 
 	// API access key from Google API's Console
-define( 'API_ACCESS_KEY', 'AAAA9MLkv08:APA91bFsKwI5qg-P2TSU2QAv0zSxe1FsYQeLrJ9C8zXay7CLDOV8UHbA1f90lDmBBD1WJt-wNK1B0ytzn5fAmNVV3SsyrdlOpdzckYb33iXaux6uRpWBy7bFviv8iaoQrOKQzh-bo_Y9' );
+define( 'API_ACCESS_KEY', '--APIKEY HERE--' );
 
 
 $registrationIds ="$row[token_id]";
